@@ -37,7 +37,7 @@ SpringBoot + Dubbo + Sentinel
 
 演示QPS/线程两种维度的流控规则在项目中的运用，并发和qps区别，项目中常见的Dubbo线程池满异常分析和处理
 
-*注：浏览器访问http://localhost:8083/dubbo/threadPoolStatus查询biz-product服务Dubbo线程池情况*
+*注：浏览器访问http://localhost:8083/dubbo/threadPoolStatus，可查询biz-product服务Dubbo线程池情况*
 
 
 
