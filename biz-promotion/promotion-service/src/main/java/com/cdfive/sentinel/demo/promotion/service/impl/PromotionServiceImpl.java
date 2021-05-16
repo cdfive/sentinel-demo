@@ -20,6 +20,6 @@ public class PromotionServiceImpl implements PromotionService {
             log.info("usePromotion reqVo={}", JSON.toJSONString(reqVo));
         }
 
-        CommonUtil.sleepRandomMs(1000, 5000);
+        CommonUtil.sleepRandomMs(10, 50);
     }
 }

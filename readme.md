@@ -49,7 +49,7 @@ SpringBoot + Dubbo + Sentinel
 
 a. dubbo线程池threads=20, jmeter线程数=10
 
-接口模拟时间10~50ms，因此预计qps为400~2000/s
+接口模拟时间10-50ms，因此预计qps为400-2000/s
 
 通过实时监控菜单，观察通过qps情况，约为600/s
 
@@ -93,7 +93,7 @@ a. 启动所有服务后，通过postman工具调用`/order/submit`下单接口�
 
 b. jmeter设置线程数为10，压测`/order/submit`下单接口，观察不同服务的实时监控菜单
 
-c. 修改`PromotionServiceImpl#usePromotion`，模拟业务问题慢调用，将耗时10~50ms调整为1000~5000ms，实时监控菜单观察
+c. 修改`PromotionServiceImpl#usePromotion`，模拟业务问题慢调用，将耗时10-50ms调整为1000-5000ms，实时监控菜单观察
 
 d. 在biz-promotion服务通过降级规则菜单，对`usePromotion`接口设置降级规则，慢调用2000ms，比例0.5，熔断时长30s
 
@@ -103,7 +103,7 @@ f.  打开`SentinelBizDubboFallback`的`@Component`注解，自定义Dubbo限流
 
 
 
-通过arthas动态替换自定义限流处理的提示信息
+修改`JsonResult`中的`MSG_BLOCK_ERROR`变量值，通过arthas动态替换自定义限流处理的提示信息：
 
 java -jar arthas-boot.jar
 
