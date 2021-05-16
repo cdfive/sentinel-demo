@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: biz-order
+
+server:
+  port: 8085
+
+dubbo:
+  protocol:
+    port: 20005
+    threads: 20
+    queues: 0
+  registry:
+    address: zookeeper://localhost:2181
+  qos:
+    enable: true
+    port: 22225
+  provider:
+    timeout: 5000
+    retries: 0
+  consumer:
+    check: false
+
+sentinel:
+  enable: true
+  clientPort: 8705
+  dashboardUrl: localhost:9999

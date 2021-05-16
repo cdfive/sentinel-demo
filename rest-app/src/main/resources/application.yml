@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: rest-app
+
+server:
+  port: 8080
+
+dubbo:
+  protocol:
+    port: 20000
+    threads: 100
+    queues: 0
+  registry:
+    address: zookeeper://localhost:2181
+  qos:
+    enable: true
+    port: 22220
+  provider:
+    timeout: 5000
+    retries: 0
+  consumer:
+    check: false
+
+sentinel:
+  enable: true
+  clientPort: 8700
+  dashboardUrl: localhost:9999

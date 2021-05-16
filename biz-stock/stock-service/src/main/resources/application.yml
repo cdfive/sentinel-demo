@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: biz-stock
+
+server:
+  port: 8082
+
+dubbo:
+  protocol:
+    port: 20002
+    threads: 20
+    queues: 0
+  registry:
+    address: zookeeper://localhost:2181
+  qos:
+    enable: true
+    port: 22222
+  provider:
+    timeout: 5000
+    retries: 0
+  consumer:
+    check: false
+
+sentinel:
+  enable: true
+  clientPort: 8702
+  dashboardUrl: localhost:9999

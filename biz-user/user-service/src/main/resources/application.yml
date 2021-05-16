@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: biz-user
+
+server:
+  port: 8081
+
+dubbo:
+  protocol:
+    port: 20001
+    threads: 20
+    queues: 0
+  registry:
+    address: zookeeper://localhost:2181
+  qos:
+    enable: true
+    port: 22221
+  provider:
+    timeout: 5000
+    retries: 0
+  consumer:
+    check: false
+
+sentinel:
+  enable: true
+  clientPort: 8701
+  dashboardUrl: localhost:9999

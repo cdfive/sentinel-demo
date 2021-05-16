@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: biz-promotion
+
+server:
+  port: 8084
+
+dubbo:
+  protocol:
+    port: 20004
+    threads: 20
+    queues: 0
+  registry:
+    address: zookeeper://localhost:2181
+  qos:
+    enable: true
+    port: 22224
+  provider:
+    timeout: 5000
+    retries: 0
+  consumer:
+    check: false
+
+sentinel:
+  enable: true
+  clientPort: 8704
+  dashboardUrl: localhost:9999

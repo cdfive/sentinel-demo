@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.cdfive.sentinel.demo.starter.sentinel.config.SentinelAutoConfiguration
